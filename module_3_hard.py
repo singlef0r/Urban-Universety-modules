@@ -1,5 +1,3 @@
-# обещее у списков, словарей, множеств, картежей
-
 def calculate_structure_sum(args):
     Summ = 0
     if isinstance(args, str):
@@ -15,9 +13,6 @@ def calculate_structure_sum(args):
             return calculate_structure_sum(args[1:])
         else:
             return Summ
-
-
-
 
 
 data_structure = [[1, 2, 3],
