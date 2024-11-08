@@ -1,18 +1,35 @@
 def calculate_structure_sum(args):
-    Summ = 0
+    Summa = 0
     if isinstance(args, str):
-        return Summ + len(args)
+        return Summa + len(args)
     elif isinstance(args, int):
-        return Summ + args
+        return Summa + args
+    elif isinstance(args, float):
+        return Summa + args
+    elif isinstance(args, bool):
+        return 1 if args else 0
     elif isinstance(args, dict):
         for key, item in args.items():
-            Summ += len(key) + calculate_structure_sum(args[key])
+            Summa += len(key) + calculate_structure_sum(args[key])
+        return Summa
+    elif isinstance(args, tuple):
+        if args[0] != ():
+            if len(args) > 1:
+                Summa += calculate_structure_sum(args[0])
+                return Summa + calculate_structure_sum(args[1:])
+            else:
+                return Summa + calculate_structure_sum(args[0])
+        else:
+            return Summa + calculate_structure_sum(args[1:])
+    elif isinstance(args, set):
+        return calculate_structure_sum(*args)
     else:
         if len(args) > 1:
-            Summ = calculate_structure_sum(args[0])
-            return calculate_structure_sum(args[1:])
+            Summa += calculate_structure_sum(args[0])
+            return Summa + calculate_structure_sum(args[1:])
         else:
-            return Summ
+            return Summa + calculate_structure_sum(args[0])
+        return Summa
 
 
 data_structure = [[1, 2, 3],
