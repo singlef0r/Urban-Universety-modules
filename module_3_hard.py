@@ -38,4 +38,5 @@ data_structure = [[1, 2, 3],
                   ((), [{(2, 'Urban', ('Urban2', 35))}])
                   ]
 
-print(calculate_structure_sum(data_structure))
+result = calculate_structure_sum(data_structure)
+print(result)
