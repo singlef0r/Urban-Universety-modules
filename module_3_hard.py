@@ -29,7 +29,6 @@ def calculate_structure_sum(args):
             return Summa + calculate_structure_sum(args[1:])
         else:
             return Summa + calculate_structure_sum(args[0])
-        return Summa
 
 
 data_structure = [[1, 2, 3],
