@@ -12,7 +12,9 @@ def calculate_structure_sum(args):
         for key, item in args.items():
             Summa += len(key) + calculate_structure_sum(args[key])
         return Summa
-    elif isinstance(args, tuple):
+    elif isinstance(args, set):
+        return calculate_structure_sum(tuple(args))
+    elif isinstance(args, (tuple, list)):
         if args[0] != ():
             if len(args) > 1:
                 Summa += calculate_structure_sum(args[0])
@@ -20,16 +22,9 @@ def calculate_structure_sum(args):
             else:
                 return Summa + calculate_structure_sum(args[0])
         else:
-            return Summa + calculate_structure_sum(args[1:])
-    elif isinstance(args, set):
-        return calculate_structure_sum(*args)
+                return Summa + calculate_structure_sum(args[1:])
     else:
-        if len(args) > 1:
-            Summa += calculate_structure_sum(args[0])
-            return Summa + calculate_structure_sum(args[1:])
-        else:
-            return Summa + calculate_structure_sum(args[0])
-
+        return 0
 
 data_structure = [[1, 2, 3],
                   {'a': 4, 'b': 5},
