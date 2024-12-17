@@ -8,7 +8,8 @@ print(list_one)
 def get_advanced_writer(file_name):
     def write_everything(*data_set):
         with open(file_name, 'w', encoding='utf-8') as file:
-            file.write(f'{data_set}\n')
+            for elem in data_set:
+                file.write(f'{elem}\n')
     return write_everything
 
 
@@ -29,4 +30,3 @@ first_ball = MysticBall('Да', 'Нет', 'Наверное')
 print(first_ball())
 print(first_ball())
 print(first_ball())
-
