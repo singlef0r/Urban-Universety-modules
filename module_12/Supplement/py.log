@@ -1,0 +1,10 @@
+2025-01-23 14:45:03,814 | INFO | Число 4 успешно разделилось на 2
+2025-01-23 14:45:03,815 | ERROR | Не получилось!
+Traceback (most recent call last):
+  File "E:\Urban Universety\Urban Universety\module_12\Supplement\calc.py", line 15, in div
+    a / b
+    ~~^~~
+ZeroDivisionError: division by zero
+2025-01-23 14:45:03,819 | INFO | Корень из числа 4 успешно вычислен!
+2025-01-23 14:45:03,819 | INFO | Корень из числа -4 успешно вычислен!
+2025-01-23 14:45:03,819 | INFO | Корень из числа 0 успешно вычислен!
