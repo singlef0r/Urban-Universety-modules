@@ -1,4 +1,4 @@
-2025-01-23 15:56:26,078 | WARNING | Неверный тип данных для объекта Runner
+2025-01-23 15:58:55,360 | WARNING | Неверный тип данных для объекта Runner
 Traceback (most recent call last):
   File "E:\Urban Universety\Urban Universety\module_12\module_12_4.py", line 23, in test_run
     oRuner = rt_with_exceptions.Runner(['Farr'])
@@ -6,7 +6,7 @@ Traceback (most recent call last):
   File "E:\Urban Universety\Urban Universety\module_12\rt_with_exceptions.py", line 6, in __init__
     raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
 TypeError: Имя может быть только строкой, передано list
-2025-01-23 15:56:26,079 | WARNING | Неверная скорость для Runner
+2025-01-23 15:58:55,361 | WARNING | Неверная скорость для Runner
 Traceback (most recent call last):
   File "E:\Urban Universety\Urban Universety\module_12\module_12_4.py", line 12, in test_walk
     oRuner = rt_with_exceptions.Runner('one', -7)
