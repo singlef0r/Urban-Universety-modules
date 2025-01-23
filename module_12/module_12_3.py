@@ -1,5 +1,6 @@
 import runner
 import unittest
+from runner_and_tournament import Runner, Tournament
 
 
 class RunnerTest(unittest.TestCase):
@@ -27,13 +28,10 @@ class RunnerTest(unittest.TestCase):
             oRuner2.walk()
         self.assertNotEqual(oRuner1.distance, oRuner2.distance)
 
-import unittest
-
-from runner_and_tournament import Runner, Tournament
-
 
 class TournamentTest(unittest.TestCase):
     is_frozen = True
+
     @classmethod
     def setUpClass(cls):
         cls.all_results = {}
@@ -66,7 +64,6 @@ class TournamentTest(unittest.TestCase):
         oTournament = Tournament(90, self.Runner_Ysain, self.Runner_Andrey, self.Runner_Nik)
         self.all_results['3'] = {num: runner.__str__() for num, runner in oTournament.start().items()}
         self.assertTrue(self.all_results[max(self.all_results.keys())], self.Runner_Nik.__str__())
-
 
 
 if __name__ == '__main__':
